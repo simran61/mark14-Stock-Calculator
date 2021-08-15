@@ -8,7 +8,7 @@ body{
     font-family: one-sans;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    /* text-align: center; */
+    text-align: center;
 }
 
 nav{
@@ -39,7 +39,7 @@ main{
 
 img{
     width: 200px;
-    padding: 0 4rem;
+    padding-bottom: 1.2rem;
 }
 
 a{
@@ -61,10 +61,11 @@ ul{
 #after_submit{
     width: 80%;
     border: 1px solid var(--primary-color);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     margin-bottom: 1.5rem;
     border-radius: 1rem;
     display: none;
+    margin: auto;
 }
 
 footer{
@@ -78,9 +79,22 @@ footer{
     color: white;
     padding: 0.5rem 1.5rem;
     border: none;
+    margin: auto;
     margin-bottom: 1rem;
     display: block;     
     border-radius: 0.8rem;
+}
+
+#profit{
+    display: none;
+}
+
+#loss{
+    display: none;
+}
+
+#ok{
+    display: none;
 }
 
 .footHeading{
