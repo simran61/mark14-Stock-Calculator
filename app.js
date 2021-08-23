@@ -4,16 +4,14 @@ var curr = document.querySelector(".current");
 
 var btn = document.querySelector(".btn");
 var after_submit = document.querySelector("#after_submit");
+var bg= document.querySelector('.bg');
 
 btn.addEventListener("click", () => {
 
     document.getElementById('graph').style.display="none";
     var purchase = Number(purc.value);
-    console.log(purchase);
     var quantity = Number(quan.value);
-    console.log(quantity)
     var current = Number(curr.value);
-    console.log(current);
 
     if (purchase < 1 || quantity < 1 || current < 1)
     {
@@ -30,6 +28,8 @@ btn.addEventListener("click", () => {
             document.getElementById('ok').style.display="block";
             document.getElementById('profit').style.display="none";
             document.getElementById('loss').style.display="none";
+            bg.style.backgroundColor="white";
+            document.documentElement.style.setProperty('--primary-color', '#1591da');
         }
         else if (diff > 0)
         {
@@ -39,6 +39,8 @@ btn.addEventListener("click", () => {
             document.getElementById('profit').style.display="block";
             document.getElementById('loss').style.display="none";
             document.getElementById('ok').style.display="none";
+            bg.style.backgroundColor="white";
+            document.documentElement.style.setProperty('--primary-color', '#1591da');
         }
         else{
             var lossPer = ((-diff / totalPurchase) * 100).toFixed(2);
@@ -47,6 +49,15 @@ btn.addEventListener("click", () => {
             document.getElementById('loss').style.display="block";
             document.getElementById('profit').style.display="none";
             document.getElementById('ok').style.display="none";
+
+            if(lossPer>50){
+                bg.style.backgroundColor="#17181a";
+                document.documentElement.style.setProperty('--primary-color', 'red');
+            }
+            else{
+                bg.style.backgroundColor="white";
+                document.documentElement.style.setProperty('--primary-color', '#1591da');
+            }
         }
     }
 });

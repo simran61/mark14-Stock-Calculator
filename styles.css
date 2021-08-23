@@ -16,7 +16,8 @@ nav{
     justify-content: space-between;
     padding: 1rem;
     border-radius: 0 0 1rem 1rem;
-    background-image: linear-gradient(to right bottom, #07224f, #005384, #0089b0, #00c1ce, #6cf9e1);
+    /* background-image: linear-gradient(to right bottom, #07224f, #005384, #0089b0, #00c1ce, #6cf9e1); */
+    background-color: var(--primary-color);
 }
 
 h1{
@@ -66,12 +67,14 @@ ul{
     border-radius: 1rem;
     display: none;
     margin: auto;
+    background-color: white;
 }
 
 footer{
     text-align: center;
     padding: 0.5rem;
-    background-image: linear-gradient(to right top, #07224f, #005384, #0089b0, #00c1ce, #6cf9e1);
+    /* background-image: linear-gradient(to right top, #07224f, #005384, #0089b0, #00c1ce, #6cf9e1); */
+    background-color: var(--primary-color);
 }
 
 .btn{
